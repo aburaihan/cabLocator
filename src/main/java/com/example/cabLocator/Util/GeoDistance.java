@@ -1,26 +1,25 @@
 package com.example.cabLocator.util;
 
 public class GeoDistance {
-    public static double distance(double lat1,
-                                  double lat2, double lon1,
-                                  double lon2)
+    public static double distance(double latitude1,
+                                  double latitude2, double longitude1,
+                                  double longitude2)
     {
-        lon1 = Math.toRadians(lon1);
-        lon2 = Math.toRadians(lon2);
-        lat1 = Math.toRadians(lat1);
-        lat2 = Math.toRadians(lat2);
+        longitude1 = Math.toRadians(longitude1);
+        longitude2 = Math.toRadians(longitude2);
+        latitude1 = Math.toRadians(latitude1);
+        latitude2 = Math.toRadians(latitude2);
 
-        // Haversine formula
-        double dlon = lon2 - lon1;
-        double dlat = lat2 - lat1;
-        double a = Math.pow(Math.sin(dlat / 2), 2)
-                + Math.cos(lat1) * Math.cos(lat2)
-                * Math.pow(Math.sin(dlon / 2),2);
+        double longDiff = longitude2 - longitude1;
+        double latDiff = latitude2 - latitude1;
+        double a = Math.pow(Math.sin(latDiff / 2), 2)
+                + Math.cos(latitude1) * Math.cos(latitude2)
+                * Math.pow(Math.sin(longDiff / 2),2);
 
-        double c = 2 * Math.asin(Math.sqrt(a));
-        double r = 6371;
+        double seg = 2 * Math.asin(Math.sqrt(a));
+        double rds = 6371;
 
-        return(c * r);
+        return(seg * rds);
     }
 
 
