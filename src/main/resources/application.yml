@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cab-management-system
+  datasource:
+    url: jdbc:mysql://localhost/cab_locator
+    username: root
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+cabLocator-config:
+  threshold_distance: 4.0000000
+
