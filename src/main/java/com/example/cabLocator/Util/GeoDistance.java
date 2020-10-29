@@ -1,4 +1,4 @@
-package com.example.cabLocator.Util;
+package com.example.cabLocator.util;
 
 public class GeoDistance {
     public static double distance(double lat1,

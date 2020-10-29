@@ -1,6 +1,6 @@
 package com.example.cabLocator.service.implementation;
 
-import com.example.cabLocator.Util.GeoDistance;
+import com.example.cabLocator.util.GeoDistance;
 import com.example.cabLocator.model.domain.Location;
 import com.example.cabLocator.model.requestDto.CabLocationRequestDto;
 import com.example.cabLocator.model.requestDto.LocationSetRequestDto;
@@ -8,10 +8,8 @@ import com.example.cabLocator.model.responseDto.AvailiableCab;
 import com.example.cabLocator.repository.LocationRepository;
 import com.example.cabLocator.service.DriverService;
 import com.example.cabLocator.service.LocationService;
-import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
